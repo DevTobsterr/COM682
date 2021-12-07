@@ -1,0 +1,87 @@
+{% extends 'application_base.html' %}
+
+{% block content %}
+
+
+
+<!-- SUBMIT POST TO DATABASE -->
+<div class="container">
+
+    <form enctype="multipart/form-data" id="media_form">
+        <h1 class="text-uppercase"> Post Media</h1>
+        <hr>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username:</label>
+          <input type="text" class="form-control" id="userName" placeholder="Username">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">User ID:</label>
+          <input type="number" class="form-control" id="userID" placeholder="User ID">
+        </div>
+
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Caption:</label>
+          <input type="text" class="form-control" id="PostCaption" placeholder="Post Caption">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">File Name:</label>
+          <input type="text" class="form-control" id="FileName">
+          <!-- <small class="form-text text-muted">Supports Majority Media.</small> -->
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Select Post Media:</label>
+          <input type="file" class="form-control" id="File">
+          <small class="form-text text-muted">Supports Majority Media.</small>
+        </div>
+
+        
+
+  
+        <button class="btn btn-success" type="button" id="uploadMedia">Submit</button>
+        <button type="reset" class="btn btn-primary">Reset Form</button>
+
+        <hr>
+      </form>
+
+</div>
+
+
+<!-- DISPLAY ALL POSTS IN DATABASE -->
+
+<div class="container">
+    <h1 class="text-uppercase"> ALL MEDIA CONTENT</h1>
+    <hr>
+    <div class="card">
+        <div class="card-header">Hosted on Azure</div>
+        <div class="card-body">
+            <button class="btn btn-primary" id="getAllPosts" >Get All Posts</button>
+          
+        </div>
+    </div>  
+    
+</div>
+
+
+
+
+
+ 
+
+<div class="container" id="loading-database"> </div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
