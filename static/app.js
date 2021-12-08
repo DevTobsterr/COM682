@@ -94,6 +94,9 @@ function getAllPosts() {
   //Iterate through the returned records and build HTML, incorporating the key values of the record in the data
   $.each( response, function( key, val ) {
     
+    items.push("<br>")
+    items.push("<br>")
+    
     items.push("<div class='card'>")
     items.push("<div class='card-header'>" + "Post by User: " + val["userName"] + "</div>")
     items.push("<img class='card-img-top' src='"+ BLOB_ACCOUNT_CDN + val["filePath"] +"'>")
